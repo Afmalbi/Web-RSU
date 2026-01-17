@@ -1,0 +1,216 @@
+
+:root{
+    --blue-main:#0d6efd;
+    --blue-soft:#e7f0ff;
+    --text-dark:#1f2937;
+    --hospital-green:#2d9c8a;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #ffffff;
+    color: var(--text-dark);
+}
+
+/* HERO */
+.hero { 
+    background: linear-gradient(rgba(13,110,253,.75), rgba(45, 156, 138, 0.7)), url('../img/RSU.jpeg') center/cover no-repeat; 
+    height: 70vh; 
+    position: relative; 
+    color: #fff; 
+}
+.hero-content { 
+    position: relative; 
+    z-index: 2; 
+}
+
+.section-title { 
+    font-weight:700; 
+    color:var(--text-dark); 
+    border-left: 5px solid var(--hospital-green);
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+/* CSS untuk nested dropdown */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+  display: none;
+}
+
+.dropdown-submenu:hover .dropdown-menu,
+.dropdown-submenu:focus-within .dropdown-menu {
+  display: block;
+}
+
+/* Untuk mobile */
+@media (max-width: 992px) {
+  .dropdown-submenu .dropdown-menu {
+    position: static;
+    margin-left: 15px;
+    border-left: 2px solid #dee2e6;
+  }
+}
+
+/* Arrow untuk dropdown dengan submenu */
+.dropdown-submenu > .dropdown-toggle::after {
+  content: "\f054";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  border: none;
+  vertical-align: middle;
+  float: right;
+  margin-left: 5px;
+}
+/* INFO BOX */
+.info-box {
+    background:#fff;
+    border-radius:15px;
+    padding:30px 20px;
+    text-align:center;
+    box-shadow:0 4px 12px rgba(0, 0, 0, 0.08);
+    transition:.3s;
+    border-top: 4px solid var(--blue-main);
+}
+.info-box:hover{ 
+    transform:translateY(-6px); 
+    box-shadow:0 8px 20px rgba(13, 110, 253, 0.15);
+}
+
+.icon-circle{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:var(--blue-soft);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto;
+    font-size:26px;
+    color:var(--blue-main);
+}
+
+/* UNIFIED CARD (DOKTER & BERITA) */
+.ui-card{
+    min-width:260px;
+    background:#fff;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow:hidden;
+    transition:.3s;
+    border-top: 4px solid var(--hospital-green);
+}
+.ui-card:hover{ 
+    transform:translateY(-8px); 
+    box-shadow:0 8px 20px rgba(13, 110, 253, 0.15);
+}
+
+.ui-card .photo-wrap{
+    height:170px;
+    background:var(--blue-soft);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow: hidden;
+}
+
+.ui-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.ui-card .card-body{
+    padding:20px;
+    text-align:center;
+}
+
+.badge-soft{
+    background:var(--blue-soft);
+    color:var(--blue-main);
+    border-radius:20px;
+    padding:6px 14px;
+    font-size:12px;
+    font-weight: 600;
+}
+
+/* SLIDER */
+.slider-wrapper{ 
+    position:relative; 
+    padding: 0 40px;
+}
+.card-slider{
+    display:flex;
+    gap:24px;
+    overflow-x:auto;
+    padding:20px 0;
+    scroll-behavior:smooth;
+}
+.card-slider::-webkit-scrollbar{ 
+    display:none; 
+}
+
+.slide-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    background:var(--blue-main);
+    color:#fff;
+    border:none;
+    box-shadow:0 8px 24px rgba(13,110,253,.4);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slide-btn:hover {
+    background: var(--hospital-green);
+}
+.slide-btn.left{ left:0; }
+.slide-btn.right{ right:0; }
+
+/* LAYANAN UNGGULAN */
+.service-card {
+    background:#fff;
+    border-radius:15px;
+    padding:30px 20px;
+    text-align:center;
+    box-shadow:0 4px 12px rgba(0, 0, 0, 0.08);
+    transition:.3s;
+    height: 100%;
+    border-top: 4px solid var(--hospital-green);
+}
+
+.service-card:hover{ 
+    transform:translateY(-6px); 
+    box-shadow:0 8px 20px rgba(13, 110, 253, 0.15);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: var(--blue-main);
+    margin-bottom: 15px;
+}
+
+/* PAGE TITLE */
+.page-title {
+    color: var(--blue-main);
+    border-left: 5px solid var(--hospital-green);
+    padding-left: 15px;
+    margin: 30px 0 15px 0;
+}
+
+/* FOOTER */
+footer{ 
+    background:#f5f7fa;
+}

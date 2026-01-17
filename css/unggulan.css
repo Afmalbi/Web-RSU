@@ -1,0 +1,240 @@
+:root{
+    --blue-main:#0d6efd;
+    --blue-soft:#e7f0ff;
+    --text-dark:#1f2937;
+    --hospital-green:#2d9c8a;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#ffffff;
+    color:var(--text-dark);
+}
+/* CSS untuk nested dropdown */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+  display: none;
+}
+
+.dropdown-submenu:hover .dropdown-menu,
+.dropdown-submenu:focus-within .dropdown-menu {
+  display: block;
+}
+
+/* Untuk mobile */
+@media (max-width: 992px) {
+  .dropdown-submenu .dropdown-menu {
+    position: static;
+    margin-left: 15px;
+    border-left: 2px solid #dee2e6;
+  }
+}
+
+/* Arrow untuk dropdown dengan submenu */
+.dropdown-submenu > .dropdown-toggle::after {
+  content: "\f054";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  border: none;
+  vertical-align: middle;
+  float: right;
+  margin-left: 5px;
+}
+/* HERO */
+.hero{
+    background: linear-gradient(rgba(13,110,253,.75), rgba(45, 156, 138, 0.7)), url('../img/RSU.jpeg') center/cover no-repeat;
+    height:40vh;
+    position:relative;
+    color:#fff;
+}
+.hero-content{position:relative;z-index:2}
+
+/* PAGE TITLE */
+.page-title {
+    color: var(--blue-main);
+    border-left: 5px solid var(--hospital-green);
+    padding-left: 15px;
+    margin: 30px 0 15px 0;
+}
+
+/* TABS */
+.nav-tabs {
+    border-bottom: 2px solid var(--blue-soft);
+    margin-bottom: 30px;
+}
+
+.nav-tabs .nav-link {
+    color: var(--text-dark);
+    font-weight: 600;
+    border: none;
+    padding: 12px 24px;
+    margin-right: 10px;
+    border-radius: 8px 8px 0 0;
+    background: transparent;
+    transition: all 0.3s;
+}
+
+.nav-tabs .nav-link:hover {
+    color: var(--blue-main);
+    background: var(--blue-soft);
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--blue-main);
+    background: white;
+    border: 2px solid var(--blue-soft);
+    border-bottom: 2px solid white;
+    position: relative;
+    bottom: -2px;
+}
+
+/* POLI CARD */
+.poli-card {
+    background:#fff;
+    border-radius:15px;
+    padding: 25px 20px;
+    box-shadow:0 4px 12px rgba(0, 0, 0, 0.08);
+    transition:.3s;
+    height: 100%;
+    text-align: center;
+    border-top: 4px solid var(--hospital-green);
+    cursor: pointer;
+}
+
+.poli-card:hover { 
+    transform:translateY(-6px); 
+    box-shadow:0 8px 20px rgba(13, 110, 253, 0.15);
+    border-top: 4px solid var(--blue-main);
+}
+
+.poli-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--blue-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: var(--blue-main);
+    margin: 0 auto 20px auto;
+    transition: all 0.3s;
+}
+
+.poli-card:hover .poli-icon {
+    transform: rotate(5deg) scale(1.1);
+}
+
+.poli-name {
+    color: var(--blue-main);
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.unggulan-badge {
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    background: var(--hospital-green);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+/* POLI DETAIL */
+.poli-detail {
+    background:#fff;
+    border-radius:15px;
+    padding: 30px;
+    box-shadow:0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-top: 30px;
+    border-top: 4px solid var(--blue-main);
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--blue-soft);
+}
+
+.close-detail {
+    background: var(--blue-soft);
+    color: var(--blue-main);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.close-detail:hover {
+    background: var(--blue-main);
+    color: white;
+}
+
+.doctor-card {
+    background: var(--blue-soft);
+    border-radius:10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--hospital-green);
+}
+
+.doctor-name {
+    color: var(--blue-main);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.schedule-badge {
+    background: var(--hospital-green);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.facility-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.facility-item i {
+    color: var(--hospital-green);
+    margin-right: 10px;
+    width: 20px;
+}
+
+/* FOOTER */
+footer{ 
+    background:#f5f7fa;
+}

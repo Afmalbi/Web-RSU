@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Poliklinik - RSU Pengayoman Cipinang</title>
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/unggulan.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand bg-white shadow-sm sticky-top py-3">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-primary" href="#">
+      <i class="fas fa-hospital-alt me-2"></i>RS Pengayoman
+    </a>
+    <ul class="navbar-nav ms-auto gap-3 align-items-center">
+      <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Home</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle fw-semibold active" data-bs-toggle="dropdown" href="#">Tentang Kami</a>
+        <ul class="dropdown-menu shadow">
+          <li><a class="dropdown-item" href="sejarah.html">Sejarah</a></li>
+          <li><a class="dropdown-item active" href="visidanmisi.html">Visi & Misi</a></li>
+          <li><a class="dropdown-item" href="#">Struktur Organisasi</a></li>
+          <li><a class="dropdown-item" href="pejabat.html">Profil Pejabat</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle fw-semibold" data-bs-toggle="dropdown" href="#">Fasilitas</a>
+        <ul class="dropdown-menu shadow">
+          <li><a class="dropdown-item active" href="unggulan.html">Layanan Unggulan</a></li>
+          <li class="dropdown-submenu">
+            <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Layanan Medis</a>
+            <ul class="dropdown-menu dropdown-submenu shadow">
+                <li><a class="dropdown-item" href="ranap.html">Rawat Inap</a></li>
+                <li><a class="dropdown-item" href="igd.html">IGD</a></li>
+                <li><a class="dropdown-item" href="rajal.html">Rawat Jalan</a></li>
+            </ul>
+            </li>
+          <li><a class="dropdown-item" href="penunjang.html">Layanan Penunjang</a></li>
+          <li><a class="dropdown-item" href="tarif.html">Tarif Pelayanan</a></li>
+          <li><a class="dropdown-item" href="asuransi.html">Kerjasama Asuransi</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link fw-semibold" href="jadwal.html">Jadwal Dokter</a></li>
+      <li class="nav-item"><a class="nav-link fw-semibold" href="#">Informasi Publik</a></li>
+      <li class="nav-item"><a class="btn btn-primary rounded-pill px-4" href="#">Daftar Online</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero d-flex align-items-center">
+  <div class="container hero-content">
+    <!-- Hero tanpa teks - hanya background -->
+  </div>
+</section>
+
+<!-- POLIKLINIK -->
+<section class="container my-5">
+  <h1 class="page-title">Poliklinik RSU Pengayoman Cipinang</h1>
+  <p class="text-muted mb-5">Layanan kesehatan terpadu dengan dokter spesialis berpengalaman untuk kebutuhan kesehatan Anda dan keluarga</p>
+
+  <!-- Tabs -->
+  <ul class="nav nav-tabs" id="poliTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="unggulan-tab" data-bs-toggle="tab" data-bs-target="#unggulan" type="button">
+        <i class="fas fa-star me-2"></i>Layanan Unggulan
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="semua-tab" data-bs-toggle="tab" data-bs-target="#semua" type="button">
+        <i class="fas fa-list me-2"></i>Semua Poliklinik
+      </button>
+    </li>
+  </ul>
+
+  <!-- Tab Content -->
+  <div class="tab-content" id="poliTabContent">
+    <!-- Tab 1: Layanan Unggulan -->
+    <div class="tab-pane fade show active" id="unggulan" role="tabpanel">
+      <div class="row" id="unggulan-container">
+        <!-- Layanan unggulan akan dimuat di sini oleh JavaScript -->
+      </div>
+    </div>
+
+    <!-- Tab 2: Semua Poliklinik -->
+    <div class="tab-pane fade" id="semua" role="tabpanel">
+      <div class="row" id="semua-poli-container">
+        <!-- Semua poli akan dimuat di sini oleh JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Poli Detail Section -->
+  <div id="poli-detail-section"></div>
+</section>
+
+<!-- MAP -->
+<section class="container my-5">
+  <h3 class="page-title">Lokasi & Kontak</h3>
+  <iframe src="https://maps.google.com/maps?q=rs%20pengayoman%20cipinang&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="350" style="border:0; border-radius: 15px;" loading="lazy"></iframe>
+</section>
+
+<!-- FOOTER -->
+<footer class="mt-5">
+  <div class="container py-5">
+    <div class="row g-4">
+
+      <!-- INFO RS -->
+      <div class="col-md-4">
+        <h5 class="fw-bold text-primary mb-3">RSU Pengayoman Cipinang</h5>
+        <p class="text-muted small mb-3">
+          RSU Pengayoman Cipinang adalah rumah sakit pemerintah di bawah naungan Kementerian Hukum dan HAM Republik Indonesia
+          yang berkomitmen memberikan pelayanan kesehatan prima, profesional, dan berorientasi pada keselamatan pasien.
+        </p>
+        <p class="text-muted small mb-1"><i class="fas fa-map-marker-alt me-2"></i>Jl. Raya Bekasi Timur No.17 B & R, Cipinang Besar Utara, Jakarta Timur</p>
+        <p class="text-muted small mb-1"><i class="fas fa-phone-alt me-2"></i>021-21015599</p>
+        <p class="text-muted small"><i class="fas fa-envelope me-2"></i>info@rspengayoman.com</p>
+      </div>
+
+      <!-- MENU CEPAT -->
+      <div class="col-md-2">
+        <h6 class="fw-bold mb-3">Menu Utama</h6>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Beranda</a></li>
+          <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Tentang Kami</a></li>
+          <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Fasilitas</a></li>
+          <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Jadwal Dokter</a></li>
+        </ul>
+      </div>
+
+      <!-- LAYANAN -->
+      <div class="col-md-3">
+        <h6 class="fw-bold mb-3">Layanan</h6>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Pendaftaran Online</a></li>
+          <li class="mb-2"><a href="#" class="text-decoration-none text-muted">IGD 24 Jam</a></li>
+          <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Layanan Unggulan</a></li>
+          <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Informasi Publik</a></li>
+        </ul>
+      </div>
+
+      <!-- JAM OPERASIONAL -->
+      <div class="col-md-3">
+        <h6 class="fw-bold mb-3">Jam Operasional</h6>
+        <p class="small text-muted mb-1">Pelayanan Rawat Jalan</p>
+        <p class="small text-muted mb-3">Senin – Jumat | 08.00 – 16.00 WIB</p>
+        <span class="badge bg-primary px-3 py-2">IGD 24 Jam</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COPYRIGHT -->
+  <div class="border-top">
+    <div class="container py-3 text-center">
+      <small class="text-muted">© 2026 RSU Pengayoman Cipinang – Kementerian Hukum dan HAM RI. All rights reserved.</small>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Data poliklinik
+  const allPoli = [
+    // Layanan Unggulan
+    { 
+      id: 'poli-gigi-umum', 
+      name: 'Poli Gigi Umum', 
+      icon: 'fa-tooth',
+      isUnggulan: true,
+      description: 'Layanan perawatan gigi dan mulut untuk semua usia dengan dokter gigi berpengalaman',
+      doctors: [
+        { name: 'Dr. Ahmad Santoso, Sp.KG', schedule: 'Senin-Jumat: 08:00-15:00', qualification: 'Spesialis Konservasi Gigi' },
+        { name: 'Dr. Siti Rahayu, Sp.Perio', schedule: 'Selasa-Kamis: 09:00-16:00', qualification: 'Spesialis Periodonsia' }
+      ],
+      facilities: ['Konsultasi Gigi', 'Pembersihan Karang Gigi', 'Tambal Gigi', 'Pencabutan Gigi', 'Perawatan Saluran Akar']
+    },
+    { 
+      id: 'poli-anak', 
+      name: 'Poli Anak', 
+      icon: 'fa-child',
+      isUnggulan: true,
+      description: 'Layanan kesehatan khusus anak dari bayi hingga remaja dengan pendekatan ramah anak',
+      doctors: [
+        { name: 'Dr. Maria Ulfa, Sp.A', schedule: 'Setiap Hari: 08:00-20:00', qualification: 'Spesialis Anak' },
+        { name: 'Dr. Budi Hartono, Sp.A(K)', schedule: 'Senin-Sabtu: 09:00-17:00', qualification: 'Spesialis Anak Konsultan' }
+      ],
+      facilities: ['Imunisasi', 'Pemeriksaan Tumbuh Kembang', 'Konsultasi Gizi Anak', 'Perawatan Bayi Baru Lahir', 'Penyakit Infeksi Anak']
+    },
+    { 
+      id: 'poli-bedah', 
+      name: 'Poli Bedah', 
+      icon: 'fa-user-md',
+      isUnggulan: true,
+      description: 'Layanan bedah umum dan spesialis dengan teknologi terkini dan tim bedah berpengalaman',
+      doctors: [
+        { name: 'Dr. Rudi Hermawan, Sp.B', schedule: 'Senin-Jumat: 08:00-16:00', qualification: 'Spesialis Bedah' },
+        { name: 'Dr. Ani Wijaya, Sp.B-KBD', schedule: 'Rabu-Jumat: 10:00-18:00', qualification: 'Spesialis Bedah Digestif' }
+      ],
+      facilities: ['Konsultasi Bedah', 'Operasi Minor', 'Operasi Mayor', 'Perawatan Luka', 'Bedah Darurat 24 Jam']
+    },
+    // Poli lainnya (tidak unggulan)
+    { id: 'poli-saraf', name: 'Poli Saraf', icon: 'fa-brain', isUnggulan: false },
+    { id: 'poli-jantung', name: 'Poli Jantung', icon: 'fa-heartbeat', isUnggulan: false },
+    { id: 'poli-mata', name: 'Poli Mata', icon: 'fa-eye', isUnggulan: false },
+    { id: 'poli-tht', name: 'Poli THT', icon: 'fa-ear-listen', isUnggulan: false },
+    { id: 'poli-kulit', name: 'Poli Kulit', icon: 'fa-allergies', isUnggulan: false },
+    { id: 'poli-obgyn', name: 'Poli Kandungan', icon: 'fa-baby', isUnggulan: false },
+    { id: 'poli-penyakit-dalam', name: 'Poli Penyakit Dalam', icon: 'fa-stethoscope', isUnggulan: false },
+    { id: 'poli-psikologi', name: 'Poli Psikologi', icon: 'fa-head-side-virus', isUnggulan: false },
+    { id: 'poli-gizi', name: 'Poli Gizi', icon: 'fa-apple-alt', isUnggulan: false },
+    { id: 'poli-rehab-medik', name: 'Poli Rehab Medik', icon: 'fa-wheelchair', isUnggulan: false },
+    { id: 'poli-radiologi', name: 'Poli Radiologi', icon: 'fa-x-ray', isUnggulan: false },
+    { id: 'poli-lab', name: 'Poli Laboratorium', icon: 'fa-flask', isUnggulan: false },
+    { id: 'poli-igd', name: 'IGD 24 Jam', icon: 'fa-ambulance', isUnggulan: false }
+  ];
+
+  // Data detail untuk poli non-unggulan
+  const poliDetails = {
+    'poli-saraf': {
+      description: 'Layanan diagnosis dan pengobatan gangguan sistem saraf',
+      doctors: [
+        { name: 'Dr. Linda Wijaya, Sp.S', schedule: 'Senin-Kamis: 09:00-15:00', qualification: 'Spesialis Saraf' }
+      ],
+      facilities: ['EEG', 'EMG', 'NCS', 'Konsultasi Stroke', 'Pengobatan Epilepsi']
+    },
+    'poli-jantung': {
+      description: 'Layanan kesehatan jantung dan pembuluh darah',
+      doctors: [
+        { name: 'Dr. Hendra Gunawan, Sp.JP', schedule: 'Selasa-Jumat: 08:00-16:00', qualification: 'Spesialis Jantung' }
+      ],
+      facilities: ['EKG', 'Echocardiography', 'Treadmill Test', 'Konsultasi Jantung']
+    },
+    'poli-mata': {
+      description: 'Layanan kesehatan mata dan koreksi penglihatan',
+      doctors: [
+        { name: 'Dr. Sari Dewi, Sp.M', schedule: 'Senin-Sabtu: 09:00-17:00', qualification: 'Spesialis Mata' }
+      ],
+      facilities: ['Pemeriksaan Refraksi', 'Operasi Katarak', 'Perawatan Glaukoma', 'Konsultasi Mata']
+    },
+    'poli-tht': {
+      description: 'Layanan kesehatan telinga, hidung, dan tenggorokan',
+      doctors: [
+        { name: 'Dr. Agus Setiawan, Sp.THT-KL', schedule: 'Senin-Jumat: 08:00-16:00', qualification: 'Spesialis THT' }
+      ],
+      facilities: ['Audiometri', 'Endoskopi', 'Operasi Sinus', 'Konsultasi THT']
+    },
+    'poli-kulit': {
+      description: 'Layanan kesehatan kulit dan kelamin',
+      doctors: [
+        { name: 'Dr. Fitriani, Sp.KK', schedule: 'Selasa-Kamis: 09:00-17:00', qualification: 'Spesialis Kulit' }
+      ],
+      facilities: ['Konsultasi Kulit', 'Krioterapi', 'Laser Therapy', 'Skin Biopsy']
+    },
+    'poli-obgyn': {
+      description: 'Layanan kesehatan kandungan dan kebidanan',
+      doctors: [
+        { name: 'Dr. Maya Sari, Sp.OG', schedule: 'Setiap Hari: 08:00-20:00', qualification: 'Spesialis Kandungan' }
+      ],
+      facilities: ['USG Kandungan', 'Pemeriksaan Kehamilan', 'Kontrol KB', 'Persalinan']
+    }
+  };
+
+  // Fungsi untuk membuat kartu poli
+  function createPoliCard(poli) {
+    return `
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="poli-card position-relative" 
+             data-poli-id="${poli.id}"
+             onclick="showPoliDetail('${poli.id}')">
+          ${poli.isUnggulan ? '<span class="unggulan-badge">Unggulan</span>' : ''}
+          <div class="poli-icon">
+            <i class="fas ${poli.icon}"></i>
+          </div>
+          <h5 class="poli-name">${poli.name}</h5>
+          <p class="text-muted small mb-0">Klik untuk detail</p>
+        </div>
+      </div>
+    `;
+  }
+
+  // Fungsi untuk menampilkan detail poli
+  function showPoliDetail(poliId) {
+    const poli = allPoli.find(p => p.id === poliId);
+    if (!poli) return;
+
+    // Dapatkan detail lengkap
+    let detail = poliDetails[poliId];
+    
+    // Jika tidak ada detail spesifik, buat data default
+    if (!detail) {
+      detail = {
+        description: `Layanan ${poli.name} dengan dokter spesialis berpengalaman. Kami menyediakan pelayanan kesehatan terbaik dengan fasilitas modern.`,
+        doctors: [
+          { name: 'Dokter Spesialis', schedule: 'Senin-Jumat: 08:00-16:00', qualification: 'Spesialis' }
+        ],
+        facilities: ['Konsultasi', 'Pemeriksaan', 'Pengobatan', 'Tindakan Medis']
+      };
+      
+      // Tambah dokter dummy untuk poli tertentu
+      if (poli.id === 'poli-penyakit-dalam') {
+        detail.doctors = [
+          { name: 'Dr. Budi Santoso, Sp.PD', schedule: 'Senin-Jumat: 08:00-16:00', qualification: 'Spesialis Penyakit Dalam' }
+        ];
+      } else if (poli.id === 'poli-radiologi') {
+        detail.doctors = [
+          { name: 'Dr. Anita Wulandari, Sp.Rad', schedule: 'Setiap Hari: 07:00-22:00', qualification: 'Spesialis Radiologi' }
+        ];
+      } else if (poli.id === 'poli-igd') {
+        detail.doctors = [
+          { name: 'Tim Dokter Jaga IGD', schedule: '24 Jam Setiap Hari', qualification: 'Dokter Umum & Spesialis' }
+        ];
+        detail.facilities = ['Resusitasi', 'Stabilisasi', 'Observasi', 'Rujukan', 'Perawatan Darurat'];
+      }
+    }
+
+    const detailHTML = `
+      <div class="poli-detail">
+        <div class="detail-header">
+          <div>
+            <h3 class="mb-2" style="color: var(--blue-main);">
+              <i class="fas ${poli.icon} me-2"></i> ${poli.name}
+            </h3>
+            <p class="text-muted mb-0">${detail.description}</p>
+          </div>
+          <button class="close-detail" onclick="closePoliDetail()">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        
+        <div class="row mt-4">
+          <div class="col-lg-6">
+            <h5 class="mb-3" style="color: var(--hospital-green);">
+              <i class="fas fa-user-md me-2"></i> Dokter Spesialis
+            </h5>
+            ${detail.doctors.map(doctor => `
+              <div class="doctor-card">
+                <h6 class="doctor-name">${doctor.name}</h6>
+                <p class="mb-1 small text-muted">${doctor.qualification}</p>
+                <span class="schedule-badge">${doctor.schedule}</span>
+              </div>
+            `).join('')}
+          </div>
+          
+          <div class="col-lg-6">
+            <h5 class="mb-3" style="color: var(--hospital-green);">
+              <i class="fas fa-procedures me-2"></i> Fasilitas
+            </h5>
+            <div class="row">
+              ${detail.facilities.map(facility => `
+                <div class="col-md-6 mb-2">
+                  <div class="facility-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>${facility}</span>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+            
+            <div class="mt-4 pt-3 border-top">
+              <button class="btn btn-primary me-2 rounded-pill px-4" onclick="location.href='#'">
+                <i class="fas fa-calendar-alt me-1"></i> Buat Janji
+              </button>
+              <button class="btn btn-outline-primary rounded-pill px-4" onclick="location.href='#'">
+                <i class="fas fa-clock me-1"></i> Lihat Jadwal
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Tampilkan detail
+    document.getElementById('poli-detail-section').innerHTML = detailHTML;
+
+    // Scroll ke detail section
+    document.getElementById('poli-detail-section').scrollIntoView({ behavior: 'smooth' });
+
+    // Update URL hash untuk bookmark
+    window.location.hash = poliId;
+  }
+
+  // Fungsi untuk menutup detail poli
+  function closePoliDetail() {
+    document.getElementById('poli-detail-section').innerHTML = '';
+    window.location.hash = '';
+  }
+
+  // Fungsi untuk inisialisasi halaman
+  function initializePage() {
+    const unggulanContainer = document.getElementById('unggulan-container');
+    const semuaContainer = document.getElementById('semua-poli-container');
+
+    // Tampilkan layanan unggulan
+    const unggulanPoli = allPoli.filter(poli => poli.isUnggulan);
+    unggulanContainer.innerHTML = unggulanPoli.map(createPoliCard).join('');
+
+    // Tampilkan semua poli
+    semuaContainer.innerHTML = allPoli.map(createPoliCard).join('');
+
+    // Cek hash URL untuk menampilkan detail poli langsung
+    if (window.location.hash) {
+      const poliId = window.location.hash.substring(1);
+      const poli = allPoli.find(p => p.id === poliId);
+      if (poli) {
+        // Switch tab sesuai dengan jenis poli
+        const tabBtn = poli.isUnggulan ? 
+          document.querySelector('#unggulan-tab') : 
+          document.querySelector('#semua-tab');
+        
+        if (tabBtn) {
+          const tab = new bootstrap.Tab(tabBtn);
+          tab.show();
+        }
+        
+        // Tampilkan detail poli setelah tab berubah
+        setTimeout(() => showPoliDetail(poliId), 300);
+      }
+    }
+
+    // Update tahun copyright
+    const currentYear = new Date().getFullYear();
+    document.querySelector('footer small').textContent = `© ${currentYear} RSU Pengayoman Cipinang – Kementerian Hukum dan HAM RI. All rights reserved.`;
+  }
+
+  // Event listener untuk tab change
+  document.querySelectorAll('#poliTab button').forEach(tab => {
+    tab.addEventListener('shown.bs.tab', function (event) {
+      // Reset ke tampilan poli jika detail sedang terbuka
+      if (document.getElementById('poli-detail-section').innerHTML !== '') {
+        closePoliDetail();
+      }
+    });
+  });
+
+  // Inisialisasi saat halaman dimuat
+  document.addEventListener('DOMContentLoaded', initializePage);
+</script>
+</body>
+</html>

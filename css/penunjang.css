@@ -1,0 +1,175 @@
+:root{
+    --blue-main:#0d6efd;
+    --blue-soft:#e7f0ff;
+    --text-dark:#1f2937;
+    --hospital-green:#2d9c8a;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#ffffff;
+    color:var(--text-dark);
+}
+/* CSS untuk nested dropdown */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+  display: none;
+}
+
+.dropdown-submenu:hover .dropdown-menu,
+.dropdown-submenu:focus-within .dropdown-menu {
+  display: block;
+}
+
+/* Untuk mobile */
+@media (max-width: 992px) {
+  .dropdown-submenu .dropdown-menu {
+    position: static;
+    margin-left: 15px;
+    border-left: 2px solid #dee2e6;
+  }
+}
+
+/* Arrow untuk dropdown dengan submenu */
+.dropdown-submenu > .dropdown-toggle::after {
+  content: "\f054";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  border: none;
+  vertical-align: middle;
+  float: right;
+  margin-left: 5px;
+}
+/* HERO */
+.hero{
+    background: linear-gradient(rgba(13,110,253,.75), rgba(45, 156, 138, 0.7)), url('../img/RSU.jpeg') center/cover no-repeat;
+    height:40vh;
+    position:relative;
+    color:#fff;
+}
+.hero-content{position:relative;z-index:2}
+
+/* PAGE TITLE */
+.page-title {
+    color: var(--blue-main);
+    border-left: 5px solid var(--hospital-green);
+    padding-left: 15px;
+    margin: 30px 0 15px 0;
+}
+
+/* SERVICE CARD */
+.service-card {
+    background:#fff;
+    border-radius:15px;
+    overflow: hidden;
+    box-shadow:0 4px 12px rgba(0, 0, 0, 0.08);
+    transition:.3s;
+    height: 100%;
+    margin-bottom: 25px;
+    border-top: 4px solid var(--hospital-green);
+}
+
+.service-card:hover { 
+    transform:translateY(-6px); 
+    box-shadow:0 8px 20px rgba(13, 110, 253, 0.15);
+    border-top: 4px solid var(--blue-main);
+}
+
+.service-header {
+    background-color: var(--blue-main);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin: 0 auto 15px auto;
+}
+
+.service-body {
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.service-schedule {
+    color: var(--hospital-green);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* MODAL */
+.modal-service-content {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.modal-service-header {
+    background-color: var(--blue-main);
+    color: white;
+    padding: 20px;
+}
+
+.modal-service-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    margin: 0 auto 20px auto;
+}
+
+/* SERVICE DETAILS */
+.service-details {
+    padding: 20px;
+}
+
+.detail-item {
+    padding: 10px 0;
+    border-bottom: 1px dashed #dee2e6;
+}
+
+.detail-title {
+    color: var(--blue-main);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    background:#fff;
+    border-radius:15px;
+    padding: 30px;
+    box-shadow:0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-top: 30px;
+    border-top: 4px solid var(--hospital-green);
+}
+
+.contact-icon {
+    color: var(--blue-main);
+    margin-right: 10px;
+    width: 24px;
+}
+
+/* FOOTER */
+footer{ 
+    background:#f5f7fa;
+}
